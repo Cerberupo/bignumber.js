@@ -46,7 +46,7 @@
  */
 
 
-import humanizebignumber from "humanizebignumber";
+import humanizebignumber from "humanizebignumber.js";
 
 var
   isNumeric = /^-?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i,
