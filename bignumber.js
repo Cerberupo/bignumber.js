@@ -1,3 +1,5 @@
+const humanizebignumber = require('humanizebignumber.js');
+
 ;(function (globalObject) {
   'use strict';
 
@@ -1831,6 +1833,13 @@
     P.isFinite = function () {
       return !!this.c;
     };
+
+    /*
+     *  Return a human-readable representation of this BigNumber
+     */
+    P.humanize = function (decimalPlaces = 0) {
+      return humanizebignumber(this.toFixed(decimalPlaces), decimalPlaces);
+    }
 
 
     /*

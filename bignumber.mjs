@@ -46,6 +46,8 @@
  */
 
 
+import humanizebignumber from "humanizebignumber";
+
 var
   isNumeric = /^-?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i,
   mathceil = Math.ceil,
@@ -1829,6 +1831,12 @@ function clone(configObject) {
     return !!this.c;
   };
 
+  /*
+     *  Return a human-readable representation of this BigNumber
+     */
+  P.humanize = function (decimalPlaces = 0) {
+    return humanizebignumber(this.toFixed(decimalPlaces), decimalPlaces);
+  }
 
   /*
    * Return true if the value of this BigNumber is greater than the value of BigNumber(y, b),

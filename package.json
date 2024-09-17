@@ -46,5 +46,7 @@
   "scripts": {
     "test": "node test/test"
   },
-  "dependencies": {}
+  "dependencies": {
+    "humanizebignumber.js": "^1.0.1"
+  }
 }
